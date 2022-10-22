@@ -11,11 +11,15 @@
     <script src="https://kit.fontawesome.com/4df8e547fa.js" crossorigin="anonymous"></script>
   </head>
   <body>
+
+
+
+
     <div id="header"> 
       <div class="container">
         <nav>
           <!----<img src="images/logo-removebg-preview.jpg" class="logo">--->
-          <h1 class="myname">Idalia.</h1>
+          <h1 class="myname"><span style="color:#ff004f">I</span>dalia.</h1>
           <ul id="sidemenu">
               <li><a href="#header">Home</a></li>
               <li><a href="#about">About</a></li>
@@ -177,12 +181,13 @@
           <a href="" class="btn btn2">Download CV</a>
         </div>
         <div class="contact-right">
-          <form>
+          <form name="submit-to-google-sheet" netlify>
             <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
             <button type="submit" class="btn btn2">Submit</button>
           </form>
+          <span id="msg"></span>
         </div>
       </div>
     </div>
@@ -192,39 +197,11 @@
     </div>
    </div>
 
+   <script src="tablinks_tabcontents.js"></script>
+   <script src="sidemenu.js"></script>
+   <script src="form_msg.js"></script>
 
-    <script>
-
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
-      
-      function opentab(tabname){
-        for (tablink of tablinks){
-          tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents){
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-        
-      }
-      
-    </script>
-
-    <script>
-
-      var sidemenu = document.getElementById("sidemenu");
-
-      function openmenu(){
-        sidemenu.style.right = "0";
-      }
-      function closemenu(){
-        sidemenu.style.right = "-200px";
-      }
-    </script>
-
-
+ 
 
   </body>
   </html>
